@@ -10,4 +10,4 @@ https://github.com/Mr-Kyary/komondor
 https://github.com/Mr-Kyary/pyrenees
 ```
 
-[あああああ](./sakane.md)
+[2021/09/22](./_post/gijiroku/20210922.md)
