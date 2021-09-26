@@ -1,0 +1,13 @@
+current directory: /Users/keitakarino/sakane_squad/vendor/bundle/gems/json-2.3.0/ext/json
+/Users/keitakarino/.rbenv/versions/2.6.6/bin/ruby -I /Users/keitakarino/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210926-26941-12mvlg0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/keitakarino/sakane_squad/vendor/bundle/gems/json-2.3.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/keitakarino/sakane_squad/vendor/bundle/gems/json-2.3.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/keitakarino/sakane_squad/vendor/bundle/gems/json-2.3.0/ext/json
+make "DESTDIR=" install

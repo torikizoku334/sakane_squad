@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-26T22:06:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">坂根研2021</title><subtitle>長島だよ
+</subtitle><entry><title type="html">Gijiroku</title><link href="http://localhost:4000/2021-09-22-gijiroku" rel="alternate" type="text/html" title="Gijiroku" /><published>2021-09-22T00:00:00+09:00</published><updated>2021-09-22T00:00:00+09:00</updated><id>http://localhost:4000/gijiroku</id><content type="html" xml:base="http://localhost:4000/2021-09-22-gijiroku">&lt;h1 id=&quot;20210922議事録&quot;&gt;2021/09/22議事録&lt;/h1&gt;
+
+&lt;h2 id=&quot;議事録作成者&quot;&gt;議事録作成者&lt;/h2&gt;
+&lt;p&gt;坂根&lt;/p&gt;
+
+&lt;h2 id=&quot;出席者&quot;&gt;出席者&lt;/h2&gt;
+&lt;p&gt;板倉、狩野、長島、槇原、三島&lt;/p&gt;
+
+&lt;h2 id=&quot;作業内容&quot;&gt;作業内容&lt;/h2&gt;
+&lt;p&gt;板倉・・・DOCKER コンポーズ作成&lt;br /&gt;
+狩野・・・Flutter の勉強　APIの記述&lt;br /&gt;
+長島・・・DOCKER コンポーズ作成&lt;br /&gt;
+槇原・・・DOCKER コンポーズ作成&lt;br /&gt;
+三島・・・DOCKER コンポーズ作成&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;次回作業内容&quot;&gt;次回作業内容&lt;/h2&gt;
+&lt;p&gt;板倉・・・DOCKER コンポーズ作成&lt;br /&gt;
+狩野・・・Flutter の勉強 サンプル作成予定&lt;br /&gt;
+長島・・・DOCKER コンポーズ作成&lt;br /&gt;
+槇原・・・DOCKER コンポーズ作成&lt;br /&gt;
+三島・・・DOCKER コンポーズ作成&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;その他&quot;&gt;その他&lt;/h2&gt;
+
+&lt;h2 id=&quot;次回議事録担当&quot;&gt;次回議事録担当&lt;/h2&gt;
+&lt;p&gt;板倉&lt;/p&gt;</content><author><name></name></author><summary type="html">2021/09/22議事録</summary></entry></feed>
