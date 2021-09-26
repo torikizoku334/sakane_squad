@@ -1,0 +1,53 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="{{ site.baseurl }}/" class="logo">
+      {% if site.logo %}
+      <picture>
+        <source src="/assets/logo.webp" type="image/webp"> 
+        <img src="/assets/logo_min.png" alt="{{ site.title }}" loading="lazy">
+      </picture>
+      {% else %}
+      <span>{{ site.title }}</span>
+      {% endif %}
+    </a>
+    <a class="navigation-menu-button" id="js-mobile-menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu">
+        {% for navigation in site.data.navigations %} {% if navigation.title and navigation.url %}
+        <li class="nav-link">
+          <a href="{{ navigation.url | prepend: site.baseurl }}"{% if navigation.isAnotherTab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ navigation.title }}</a>
+          {% endif %} {% endfor %}
+      </ul>
+    </nav>
+    <div class="breadcrumbs" style="display:none">
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="https://aloerina01.github.io/">
+            <span itemprop="name">mille-feuille code</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        {% if page.posttype_name %}
+        <li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ page.posttype_url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+            <span itemprop="name">{{ page.posttype_name }}</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+        {% endif %}
+        {% if page.posttype_name and page.title %}
+        <li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+            <span itemprop="name">{{ page.title }}</span>
+            </a>
+          <meta itemprop="position" content="3" />
+        </li>
+        {% endif %}
+        </ol>
+    </div>
+  </div>
+</header>

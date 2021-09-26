@@ -1,2 +1,104 @@
-theme: jekyll-theme-cayman
-title: 坂根班2021
+# External gems
+# See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
+plugins:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+
+exclude:
+  - "/vendor/"
+  - "scripts"
+  - "Gemfile"
+  - "gemfile.lock"
+  - "Rakefile"
+  - "package.json"
+  - "CNAME"
+  - "circle.yml"
+  - ".circleci"
+  - "package.json"
+  - "package-lock.json"
+  - "webpack.config.js"
+  - "README.md"
+  - "_config.dev.yml"
+  - "_config.algolia.yml"
+  
+lsi: true
+
+# Site settings
+title: "坂根研2021"
+subtitle: "坂根研だよ"
+email:
+name: 坂根研
+description: >
+  長島だよ
+# Base URL of site (i.e. /blog). It should always start with a slash,
+# and never end with a slash. Set it to a blank value if hosting at the
+# root of your server.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://aloerina01.github.io" # the base hostname & protocol for your site
+cover: "/assets/header_image_2_min.jpg"
+logo: "/assets/logo.png"
+
+# Build settings
+markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"
+inter_post_navigation: false
+highlightjs_theme: "atom-one-dark"
+
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# Collections (Define post type)
+collections:
+  pages:
+    output: true
+  posts:
+    output: true
+    permalink: /:path
+  old:
+    output: true
+
+# Front Matter default
+defaults:
+  # - scope:
+  #     path: ""
+  #     type: "pages"
+  #   values:
+  - scope:
+      path: "_posts/blog"
+      type: "posts"
+    values:
+      layout: post
+      posttype: blog
+      posttype_url: /blogs
+      posttype_name: "記事"
+  - scope:
+      path: "_posts/tip"
+      type: "posts"
+    values:
+      layout: post
+      posttype: tip
+      posttype_url: /tips
+      posttype_name: "Tips"
+  - scope:
+      path: ""
+      type: "old"
+    values:
+      permalink: /:categories/:year/:month/:day/:title:output_ext
+
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: JavaScript
+    desc: ""
+
+  - cat: css
+    desc: ""

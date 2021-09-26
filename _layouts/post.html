@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+
+  <main class="page-content">
+    <div class="post">
+      <div class="post-header-container {% if page.cover %}has-cover{% endif %}" {% if page.cover %}style="background-image: url({{ page.cover | prepend: site.baseurl }});"
+        {% endif %}>
+        <div class="scrim {% if page.cover %}has-cover{% endif %}">
+          <header class="post-header">
+            <h1 class="title">{{ page.title }}</h1>
+            <!-- <p class="info">by <strong>{{ page.author }}</strong></p> -->
+          </header>
+        </div>
+      </div>
+      <div class="wrapper">
+        {% unless page.cover %} {% include page_divider.html %} {% endunless %}
+        <section class="post-meta">
+          <div class="post-date">{{ page.date | date: "%F" }}</div>
+          <div class="post-categories">
+            {% if page.categories.size > 0 %}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="post-categories-icon" viewBox="0 0 16 16">
+              <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/>
+              <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586l7 7L13.586 9l-7-7H2v4.586z"/>
+            </svg>
+            {% for cat in page.categories %} {% if site.jekyll-archives %}
+            <a href="{{ site.baseurl }}/category/{{ cat | downcase }}/">{{ cat }}</a>{% if forloop.last == false %}, {% endif %} {% else %}
+            <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %} {% endif %} {% endfor %} {% endif %}
+          </div>
+        </section>
+
+        <article class="post-content">
+          {{ content }}
+        </article>
+
+        {% if site.jekyll-archives %} {% if page.tags.size > 0 %}
+        <section class="tags">
+          <strong>Tags:</strong> {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
+        </section>
+        {% endif %} {% endif %}
+
+        {% if site.inter_post_navigation == true %}
+        <section class="post-navigation">
+          <span class="prev-post">
+            {% if page.previous.url %}
+            <a href="{{page.previous.url | prepend: site.baseurl}}">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fas fa-angle-double-left fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="page-number">{{page.previous.title}}</span>
+            </a>
+            {% endif %}
+          </span>
+          <span class="next-post">
+            {% if page.next.url %}
+            <a href="{{page.next.url | prepend: site.baseurl}}">
+              <span class="page-number">{{page.next.title}}</span>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fas fa-angle-double-right fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            {% endif %}
+          </span>
+        </section>
+        {% endif %} {% if site.disqus_shortname %} {% unless page.disqus_disabled %}
+        <section class="disqus">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            var disqus_shortname = '{{ site.disqus_shortname }}';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the
+            <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          </noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by
+            <span class="logo-disqus">Disqus</span>
+          </a>
+        </section>
+        {% endunless %} {% endif %}
+
+      </div>
+    </div>
+
+  </main>
+
+  {% if site.related_posts %}
+    {% include related_posts.html %}
+  {% endif %}
+  
+  {% include tags.html %}
+
+  {% include scripts.html %}
+
+</body>
+
+</html>
