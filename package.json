@@ -1,5 +1,5 @@
 {
-  "name": "aloerina01.github.io",
+  "name": "mr-kyary.github.io/sakane_squad/",
   "scripts": {
     "start": "npm run demo",
     "build": "bundle exec jekyll serve",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/aloerina01/aloerina01.github.io/issues"
   },
-  "homepage": "https://aloerina01.github.io",
+  "homepage": "https://mr-kyary.github.io/sakane_squad/",
   "dependencies": {
     "to": "^0.2.9",
     "update": "^0.7.4"
