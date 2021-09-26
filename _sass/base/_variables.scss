@@ -1,0 +1,85 @@
+// Google Fonts
+@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700,300|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
+
+// Typography
+$base-font-family: Avenir , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "メイリオ" , Meiryo , sans-serif;
+// $base-font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; // $helvetica;
+$heading-font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", sans-serif; // $base-font-family;
+
+// Font Sizes
+$base-font-size: $em-base; // 16px
+
+// Adjust modular scale ratio
+$modular-scale-ratio: $minor-third;
+
+// Line height
+$base-line-height: 1.8;
+$heading-line-height: 1.8;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * $em-base;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+$pale-gray: #f8f8f8;
+$white: #fff;
+// Material UI Colors.
+$turquoise: #26C6DA;	// Cyan
+$green: #26A69A;	  	// Nephritis
+$blue: #42A5F5;				// Belize Hole
+$purple: #7E57C2;			// Wisteria
+$orange: #FF7043;			// Pumpkin
+$red:	#EC407A;				// Pomegranate
+$gray: #78909C;				// Asbestos
+
+$cyan-100: #B2EBF2;
+$cyan-200: #80DEEA;
+$cyan-300: #4DD0E1;
+$cyan-400: #26C6DA;
+$cyan-500: #00BCD4;
+
+$pink-100: #F8BBD0;
+$pink-200: #F48FB1;
+$pink-300: #F06292;
+$pink-400: #EC407A;
+$pink-500: #E91E63;
+$pink-600: #D81B60;
+
+$deep-orange-200: #FFAB91;
+
+$color-twitter: #55ACEE;
+$color-facebook: #3B5998;
+$color-google: #CC3732;
+$color-pocket: #DC3D50;
+$color-hatebu:#00A4DE;
+$color-line: #00C300;
+
+// custom color
+$blue-gray-100: #CFD8DC;
+$blue-gray-300: #90A4AE;
+$blue-gray-400: #78909C;
+$blue-gray-600: #546E7A;
+
+$pink: #F07DA8;
+$blue: #5487e5;
+$purple: #9B63F8;
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $blue-gray-600;
+$main-color: $pink-300;
+$accent-color: $blue;
+$action-color: $main-color;
+
+// Border
+$base-border-color: $blue-gray-100;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
