@@ -49,9 +49,7 @@ highlightjs_theme: "atom-one-dark"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
-  enabled:
-    - categories
-    - tags
+  enabled: all
   layout: 'archive'
   permalinks:
     category: '/category/:name/'
