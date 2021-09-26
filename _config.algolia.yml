@@ -58,7 +58,7 @@ description: >
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://aloerina01.github.io" # the base hostname & protocol for your site
+url: "https://mr-kyary.github.io/sakane_squad/" # the base hostname & protocol for your site
 cover: "/assets/header_image_2_min.jpg"
 logo: "/assets/logo.webp"
 contact_url: "https://goo.gl/forms/CpmOgk2omnWqTzz43"
@@ -278,7 +278,3 @@ protocols:
     fb_image_type: "image/png"
 
     twitter_image: "/assets/logo_whitebg.png"
-
-    os_repo: "https://github.com/aloerina01/aloerina01.github.io"
-    os_rcs_type: "git"
-    os_src: "git@github.com:aloerina01/aloerina01.github.io.git"
